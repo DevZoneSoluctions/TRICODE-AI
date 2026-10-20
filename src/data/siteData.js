@@ -298,3 +298,108 @@ export const companyValues = [
   { stat: "5.0★", label: "Client Satisfaction Rating" },
   { stat: "0%", label: "Generic Boilerplate Used" }
 ];
+
+export const teamMembers = [
+  {
+    id: "waqas-ahmad",
+    name: "Waqas Ahmad",
+    role: "Chief Executive Officer (CEO) & Founder",
+    department: "Executive Leadership",
+    isLeader: true,
+    bio: "Visionary leader guiding TRICODE's overarching strategy, enterprise AI initiatives, and engineering standards. Passionate about empowering visionary businesses through cutting-edge intelligent automation and software craft.",
+    skills: ["AI Strategy", "Executive Leadership", "Enterprise Architecture", "Product Vision"],
+    image: null, // Ready for photo drop
+    initials: "WA",
+    gradient: "from-[#2563EB] to-[#7C3AED]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "waqas@tricode.ai"
+    }
+  },
+  {
+    id: "adeeba",
+    name: "Adeeba",
+    role: "Senior Backend Developer",
+    department: "Core Backend Engineering",
+    isLeader: false,
+    bio: "Core backend architect specializing in scalable microservices, secure REST/GraphQL APIs, database modeling, and high-concurrency server pipelines.",
+    skills: ["Python", "FastAPI", "Node.js", "PostgreSQL", "System Architecture"],
+    image: null,
+    initials: "AD",
+    gradient: "from-[#0284C7] to-[#2563EB]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "adeeba@tricode.ai"
+    }
+  },
+  {
+    id: "sajid",
+    name: "Sajid",
+    role: "Backend Developer",
+    department: "Backend & Cloud Systems",
+    isLeader: false,
+    bio: "Dedicated backend engineer focused on resilient API integration, cloud-native deployments, distributed caching, and backend performance tuning.",
+    skills: ["Django", "Python", "RESTful APIs", "Redis", "Docker"],
+    image: null,
+    initials: "SA",
+    gradient: "from-[#2563EB] to-[#00D2FF]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "sajid@tricode.ai"
+    }
+  },
+  {
+    id: "sehar",
+    name: "Sehar",
+    role: "Flutter & Mobile Developer",
+    department: "Mobile Engineering",
+    isLeader: false,
+    bio: "Expert Flutter engineer crafting visually stunning, responsive Android and iOS apps with 60FPS fluid motion, reactive state management, and native device integrations.",
+    skills: ["Flutter", "Dart", "BLoC / Provider", "iOS & Android", "UI/UX Motion"],
+    image: null,
+    initials: "SH",
+    gradient: "from-[#00D2FF] to-[#2563EB]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "sehar@tricode.ai"
+    }
+  },
+  {
+    id: "salman",
+    name: "Salman",
+    role: "Shopify & E-Commerce Developer",
+    department: "E-Commerce Solutions",
+    isLeader: false,
+    bio: "Specialist in bespoke Shopify storefronts, custom Liquid templating, headless commerce architectures, and conversion-optimized retail experiences.",
+    skills: ["Shopify Plus", "Liquid", "Headless Hydrogen", "Theme Customization", "E-Commerce APIs"],
+    image: null,
+    initials: "SL",
+    gradient: "from-[#10B981] to-[#2563EB]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "salman@tricode.ai"
+    }
+  },
+  {
+    id: "bisma",
+    name: "Bisma",
+    role: "Marketing Manager",
+    department: "Growth & Brand Strategy",
+    isLeader: false,
+    bio: "Strategic growth marketer leading TRICODE's digital presence, multi-channel outreach campaigns, brand positioning, and enterprise client acquisition funnels.",
+    skills: ["Brand Strategy", "Digital Marketing", "SEO & Content", "Performance Analytics", "Client Growth"],
+    image: null,
+    initials: "BM",
+    gradient: "from-[#EC4899] to-[#7C3AED]",
+    social: {
+      linkedin: "#",
+      github: "#",
+      email: "bisma@tricode.ai"
+    }
+  }
+];
