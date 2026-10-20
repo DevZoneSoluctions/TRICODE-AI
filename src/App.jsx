@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         {isLoading && (
           <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
         )}
@@ -36,11 +36,7 @@ function App() {
 
       <HashRouter>
         <ScrollToTop />
-        <div
-          className={`flex flex-col min-h-screen transition-opacity duration-700 ease-out ${
-            isLoading ? "opacity-0 pointer-events-none" : "opacity-100"
-          }`}
-        >
+        <div className="flex flex-col min-h-screen bg-[#F8FAFC]">
           <Navbar />
           <main className="flex-1">
             <Routes>
