@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* TRICODE Authentic Brand Palette (Extracted directly from TRICODE AI Logo) */
+  --color-tricode-blue-500: #2563EB;
+  --color-tricode-blue-600: #1D4ED8;
+  --color-tricode-blue-700: #1E40AF;
+  --color-tricode-blue-light: #EFF6FF;
+
+  --color-tricode-cyan-500: #00D2FF;
+  --color-tricode-cyan-light: #F0FDFA;
+
+  --color-tricode-violet-500: #7C3AED;
+  --color-tricode-violet-600: #6D28D9;
+  --color-tricode-violet-light: #F5F3FF;
+
+  --color-tricode-dark: #0F172A;
+  --color-tricode-navy: #1E293B;
+  --color-tricode-muted: #64748B;
+  --color-tricode-subtle: #94A3B8;
+  --color-tricode-border: #E2E8F0;
+  --color-tricode-surface: #FFFFFF;
+  --color-tricode-bg: #F8FAFC;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color-scheme: light;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+/* Clean, modern typography */
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.025em;
+}
+
+/* TRICODE Signature Logo Gradients */
+.gradient-tricode {
+  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 50%, #7C3AED 100%);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0284C7 0%, #2563EB 45%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-blue {
+  background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-violet {
+  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Premium Surface Cards & Glass */
+.tricode-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(37, 99, 235, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tricode-card:hover {
+  border-color: #BFDBFE;
+  box-shadow: 0 16px 36px -4px rgba(37, 99, 235, 0.12), 0 6px 16px -2px rgba(124, 58, 237, 0.06);
+  transform: translateY(-3px);
+}
+
+.tricode-glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.tricode-dark-card {
+  background: #0F172A;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.5);
+  color: #FFFFFF;
+}
+
+/* Subtle background grid pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(rgba(37, 99, 235, 0.08) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Ambient glow blobs */
+.glow-ambient-blue {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.14) 0%, rgba(37, 99, 235, 0) 70%);
+}
+
+.glow-ambient-violet {
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.12) 0%, rgba(124, 58, 237, 0) 70%);
+}
+
+.glow-ambient-cyan {
+  background: radial-gradient(circle, rgba(0, 210, 255, 0.14) 0%, rgba(0, 210, 255, 0) 70%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+  border: 2px solid #F8FAFC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563EB;
+}
+
+/* Orbital Animations matching the TRICODE Logo Ring */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-1.5deg);
+  }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.03);
+  }
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 8.5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 4s ease-in-out infinite;
+}
+
+.animate-orbit {
+  animation: orbitSpin 24s linear infinite;
+}
+
+.animate-orbit-reverse {
+  animation: orbitSpin 30s linear infinite reverse;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
