@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import Button from "./Button";
+import logoImg from "../assets/favicon.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -54,7 +55,7 @@ export default function Navbar() {
             >
               <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-[#0F172A] p-1.5 border border-[#CBD5E1] shadow-sm shadow-blue-500/10 group-hover:scale-105 group-hover:border-[#2563EB] transition-all duration-300 flex items-center justify-center">
                 <img
-                  src="/favicon.png"
+                  src={logoImg}
                   alt="TRICODE AI Logo"
                   className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]"
                 />

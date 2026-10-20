@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Mail, Phone, MapPin, Sparkles } from "lucide-react";
 import { siteConfig } from "../data/siteData";
+import logoImg from "../assets/favicon.png";
 
 // Inline social icons
 const GithubIcon = () => (
@@ -37,7 +38,7 @@ export default function Footer() {
             <Link to="/" className="flex items-center gap-3.5 mb-5 group">
               <div className="w-11 h-11 rounded-xl bg-[#0F172A] p-1.5 border border-[#CBD5E1] shadow-sm shadow-blue-500/15 group-hover:scale-105 group-hover:border-[#2563EB] transition-all duration-300 flex items-center justify-center">
                 <img
-                  src="/favicon.png"
+                  src={logoImg}
                   alt="TRICODE AI Logo"
                   className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]"
                 />

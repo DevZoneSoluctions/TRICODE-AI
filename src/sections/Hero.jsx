@@ -2,6 +2,7 @@
 import { ArrowRight, Sparkles, Cpu, ShieldCheck, Zap } from "lucide-react";
 import { motion } from "motion/react";
 import Button from "../components/Button";
+import logoImg from "../assets/favicon.png";
 
 export default function Hero() {
   return (
@@ -125,7 +126,7 @@ export default function Hero() {
               <div className="relative z-20 w-44 h-44 sm:w-52 sm:h-52 rounded-3xl bg-[#0F172A] p-4 border-2 border-[#2563EB] shadow-[0_0_50px_rgba(37,99,235,0.25)] flex flex-col items-center justify-center animate-float-slow overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-tr from-[#2563EB]/25 via-transparent to-[#7C3AED]/25" />
                 <img
-                  src="/favicon.png"
+                  src={logoImg}
                   alt="TRICODE AI Core"
                   className="w-full h-full object-contain relative z-10 filter drop-shadow-[0_4px_16px_rgba(37,99,235,0.6)]"
                 />
