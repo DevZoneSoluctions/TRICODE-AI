@@ -141,8 +141,10 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const response = await fetch(`${apiBase}/api/contact`, {
+      const apiUrl = import.meta.env.VITE_API_URL
+        ? `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api/contact`
+        : "/api/contact";
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
