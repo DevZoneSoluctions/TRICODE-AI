@@ -1,10 +1,14 @@
-﻿import express from "express";
+import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
 import rateLimit from "express-rate-limit";
 import { config } from "dotenv";
+import { fileURLToPath } from "url";
+import path from "path";
 
-// Load environment variables
+// Load environment variables reliably from server/.env or current working directory
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+config({ path: path.join(__dirname, ".env") });
 config();
 
 const app = express();
