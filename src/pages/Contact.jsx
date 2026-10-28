@@ -106,6 +106,7 @@ export default function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [apiError, setApiError] = useState("");
 
   useEffect(() => {
     document.title = "Contact Studio & Start a Project — TRICODE AI Technologies";
@@ -128,7 +129,7 @@ export default function Contact() {
     return errs;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -136,17 +137,43 @@ export default function Contact() {
       return;
     }
     setErrors({});
+    setApiError("");
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      confetti({
-        particleCount: 90,
-        spread: 70,
-        origin: { y: 0.6 },
-        colors: ["#2563EB", "#7C3AED", "#00D2FF", "#3B82F6"],
+
+    try {
+      const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
+      const response = await fetch(`${apiBase}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    }, 800);
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setIsSubmitted(true);
+        confetti({
+          particleCount: 90,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ["#2563EB", "#7C3AED", "#00D2FF", "#3B82F6"],
+        });
+      } else {
+        // Server returned a validation or business error
+        if (data.errors) {
+          setErrors(data.errors);
+        }
+        setApiError(
+          data.message || "Something went wrong. Please try again or contact us directly."
+        );
+      }
+    } catch (_err) {
+      setApiError(
+        "Unable to reach our servers. Please check your connection or email us directly."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -163,6 +190,7 @@ export default function Contact() {
       budget: "< $10k", timeline: "1-3 months", message: "",
     });
     setErrors({});
+    setApiError("");
   };
 
   return (
@@ -462,6 +490,21 @@ export default function Contact() {
 
                         {/* Submit Button */}
                         <div className="pt-1">
+                          {/* API Error Banner */}
+                          <AnimatePresence>
+                            {apiError && (
+                              <motion.div
+                                initial={{ opacity: 0, y: -6 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -6 }}
+                                className="mb-4 flex items-start gap-2.5 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-red-600 text-sm font-medium"
+                              >
+                                <AlertCircle className="w-4 h-4 mt-0.5 shrink-0" />
+                                <span>{apiError}</span>
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+
                           <motion.button
                             type="submit"
                             disabled={isSubmitting}
