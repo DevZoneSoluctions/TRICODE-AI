@@ -50,13 +50,14 @@ export default function Navbar() {
             {/* TRICODE Brand Logo & Title */}
             <Link
               to="/"
-              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-xl"
+              className="flex items-center gap-2 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-xl"
               aria-label="TRICODE AI Technologies Home"
             >
               <img
                 src={logoImg}
                 alt="TRICODE AI Logo"
-                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_4px_16px_rgba(0,210,255,0.35)] group-hover:scale-105 transition-transform duration-300"
+                className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                style={{ mixBlendMode: "multiply" }}
               />
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
