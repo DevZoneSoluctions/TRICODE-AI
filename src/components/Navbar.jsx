@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import Button from "./Button";
-const logoImg = "/favicon.png";
+const logoImg = "/tricode-logo-new.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
