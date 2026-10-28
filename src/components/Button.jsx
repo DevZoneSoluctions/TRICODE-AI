@@ -24,8 +24,8 @@ export default function Button({
   };
 
   const variantStyles = {
-    primary: "bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#7C3AED] text-white shadow-md shadow-blue-600/20 hover:shadow-lg hover:shadow-blue-600/35 hover:brightness-105 active:scale-[0.98]",
-    secondary: "bg-white text-[#0F172A] border border-[#E2E8F0] hover:border-[#2563EB] hover:text-[#2563EB] hover:bg-[#EFF6FF]/60 shadow-xs active:scale-[0.98]",
+    primary: "bg-gradient-to-r from-[#00D2FF] via-[#2563EB] to-[#C026D3] text-white shadow-md shadow-blue-600/25 hover:shadow-xl hover:shadow-cyan-500/35 hover:brightness-105 active:scale-[0.98]",
+    secondary: "bg-white text-[#0F172A] border border-[#E2E8F0] hover:border-[#00D2FF] hover:text-[#0284C7] hover:bg-[#EFF6FF]/60 shadow-xs active:scale-[0.98]",
     cyan: "bg-gradient-to-r from-[#0284C7] to-[#00D2FF] text-white shadow-md shadow-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/35 hover:brightness-105 active:scale-[0.98]",
     dark: "bg-[#0F172A] text-white hover:bg-[#1E293B] border border-[#334155] shadow-md shadow-slate-900/20 active:scale-[0.98]",
     outline: "bg-transparent border border-[#2563EB] text-[#2563EB] hover:bg-[#2563EB] hover:text-white active:scale-[0.98]",

@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X, ArrowUpRight, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import Button from "./Button";
-import logoImg from "../assets/favicon.png";
+const logoImg = "/favicon.png";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -50,22 +50,20 @@ export default function Navbar() {
             {/* TRICODE Brand Logo & Title */}
             <Link
               to="/"
-              className="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-xl"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] rounded-xl"
               aria-label="TRICODE AI Technologies Home"
             >
-              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-[#0F172A] p-1.5 border border-[#CBD5E1] shadow-sm shadow-blue-500/10 group-hover:scale-105 group-hover:border-[#2563EB] transition-all duration-300 flex items-center justify-center">
-                <img
-                  src={logoImg}
-                  alt="TRICODE AI Logo"
-                  className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,99,235,0.4)]"
-                />
-              </div>
+              <img
+                src={logoImg}
+                alt="TRICODE AI Logo"
+                className="h-12 sm:h-14 w-auto object-contain filter drop-shadow-[0_4px_16px_rgba(0,210,255,0.35)] group-hover:scale-105 transition-transform duration-300"
+              />
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-heading font-extrabold text-xl text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
+                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
                     TRICODE
                   </span>
-                  <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded-sm bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]">
+                  <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded-sm bg-gradient-to-r from-[#00D2FF]/15 to-[#D946EF]/15 text-[#2563EB] border border-[#00D2FF]/30">
                     AI
                   </span>
                 </div>

@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* TRICODE Authentic Brand Palette (Extracted directly from TRICODE AI Logo) */
   --color-tricode-blue-500: #2563EB;
@@ -27,39 +28,44 @@
 }
 
 :root {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   color-scheme: light;
   background-color: #F8FAFC;
   color: #0F172A;
 }
 
-/* Clean, modern typography */
+/* Manrope bold modern typography */
 h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Manrope', sans-serif;
   letter-spacing: -0.025em;
+  font-weight: 700;
 }
 
-/* TRICODE Signature Logo Gradients */
+/* TRICODE Signature Logo Gradients (Cyan #00D2FF -> Royal Blue #2563EB -> Magenta #D946EF) */
 .gradient-tricode {
-  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 50%, #7C3AED 100%);
+  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 38%, #9333EA 72%, #D946EF 100%);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #0284C7 0%, #2563EB 45%, #7C3AED 100%);
+  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 38%, #9333EA 72%, #D946EF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-blue {
-  background: linear-gradient(135deg, #0284C7 0%, #2563EB 100%);
+  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gradient-text-violet {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #9333EA 60%, #D946EF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.gradient-logo-btn {
+  background: linear-gradient(135deg, #00D2FF 0%, #2563EB 42%, #C026D3 100%);
 }
 
 /* Premium Surface Cards & Glass */
@@ -193,6 +199,68 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 
 .animate-orbit-reverse {
   animation: orbitSpin 30s linear infinite reverse;
+}
+
+/* Scroll-to-top: Spinning gradient ring */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Scroll-to-top: Arrow bounce loop */
+@keyframes bounceArrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-4px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 2.5s linear infinite;
+}
+
+.animate-bounce-arrow {
+  animation: bounceArrow 1.6s ease-in-out infinite;
+}
+
+/* Continuous Carousel Marquee Animations */
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 85s linear infinite;
+}
+
+.animate-marquee-track-reverse {
+  display: flex;
+  width: max-content;
+  animation: marqueeRight 95s linear infinite;
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
 }
 
 /* Accessibility */

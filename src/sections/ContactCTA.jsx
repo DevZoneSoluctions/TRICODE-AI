@@ -69,7 +69,9 @@ export default function ContactCTA() {
               Start a Project
             </Button>
             <Button
-              href={`mailto:${siteConfig.email}`}
+              href="https://mail.google.com/mail/?view=cm&to=tricodeaitechnologies@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               variant="secondary"
               size="lg"
               icon={Mail}

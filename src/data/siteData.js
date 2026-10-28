@@ -3,9 +3,9 @@ export const siteConfig = {
   shortName: "TRICODE",
   tagline: "Engineering the Future of Intelligent Systems",
   description: "TRICODE AI Technologies engineers intelligent software, high-performance web platforms, and visionary digital products that empower industry leaders.",
-  email: "hello@tricodetech.ai",
-  phone: "+1 (888) 874-2633",
-  address: "Innovation District, Tech Boulevard, Suite 700",
+  email: "tricodeaitechnologies@gmail.com",
+  phone: "+92 311 4569115",
+  address: "Opposite to Wapda, Bahawalnagar, Punjab, Pakistan",
   socials: [
     { name: "GitHub", href: "https://github.com", icon: "Github" },
     { name: "LinkedIn", href: "https://linkedin.com", icon: "Linkedin" },
@@ -28,13 +28,47 @@ export const technologies = [
 
 export const servicesData = [
   {
+    id: "mobile-development",
+    number: "01", // Ab yeh pehle number par aayega
+    title: "Mobile Application Engineering",
+    shortDesc: "Silky smooth iOS and Android applications with offline-first synchronization and native tactile responsiveness.",
+    fullDesc: "Our mobile engineering team creates intuitive, gesture-driven applications. Every transition, touch feedback, and background synchronization workflow is tuned for maximum retention and seamless usability across all device form factors.",
+    icon: "Smartphone",
+    accent: "violet", // Color blue kar diya taake pehle wale card jaisa lage
+    deliverables: [
+      "Cross-Platform iOS & Android Apps",
+      "Native Performance Optimization",
+      "Real-Time Push & Device Sync",
+      "Biometric Security Integration",
+      "Mobile-First AI Assistants"
+    ],
+    technologies: ["Flutter", "Dart", "React Native", "Swift", "Kotlin"] // Technologies update
+  },
+  {
+    id: "web-apps",
+    number: "02", // Web beech mein
+    title: "Web Platforms & Next-Gen Frontends",
+    shortDesc: "Architecturally sound, blazing-fast web applications with editorial visual polish and reactive design systems.",
+    fullDesc: "We craft web software that leaves lasting impressions. By combining modern front-end engineering with fluid micro-interactions and rigorous performance optimization, we build applications that scale gracefully from startup MVP to millions of concurrent users.",
+    icon: "Globe",
+    accent: "coral", // Purple color
+    deliverables: [
+      "Enterprise Web Applications",
+      "High-Performance Dashboards",
+      "Interactive 3D / Canvas Experiences",
+      "Scalable Design Systems",
+      "Headless & API-First Architectures"
+    ],
+    technologies: ["React 19", "Next.js", "Node.js", "Express.js", "Tailwind CSS"] // Node.js & Express add kiye
+  },
+  {
     id: "ai-solutions",
-    number: "01",
+    number: "03", // AI ab teesre number par
     title: "AI Solutions & Intelligent Automation",
     shortDesc: "End-to-end custom LLMs, enterprise agentic workflows, and predictive analytics that automate complex operational reasoning.",
     fullDesc: "We build tailored intelligent systems designed to transform messy business data into decisive enterprise advantages. From private retrieval-augmented generation (RAG) to autonomous multi-agent task runners, our solutions operate with high precision and deterministic governance.",
     icon: "Brain",
-    accent: "violet",
+    accent: "mint", // Cyan color
     deliverables: [
       "Custom SLM & LLM Fine-Tuning",
       "Private Enterprise RAG Pipelines",
@@ -43,40 +77,6 @@ export const servicesData = [
       "Predictive Machine Learning Models"
     ],
     technologies: ["PyTorch", "LangGraph", "Hugging Face", "Qdrant", "Python"]
-  },
-  {
-    id: "web-apps",
-    number: "02",
-    title: "Web Platforms & Next-Gen Frontends",
-    shortDesc: "Architecturally sound, blazing-fast web applications with editorial visual polish and reactive design systems.",
-    fullDesc: "We craft web software that leaves lasting impressions. By combining modern front-end engineering with fluid micro-interactions and rigorous performance optimization, we build applications that scale gracefully from startup MVP to millions of concurrent users.",
-    icon: "Globe",
-    accent: "coral",
-    deliverables: [
-      "Enterprise Web Applications",
-      "High-Performance Dashboards",
-      "Interactive 3D / Canvas Experiences",
-      "Scalable Design Systems",
-      "Headless & API-First Architectures"
-    ],
-    technologies: ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Vite"]
-  },
-  {
-    id: "mobile-development",
-    number: "03",
-    title: "Mobile Application Engineering",
-    shortDesc: "Silky smooth iOS and Android applications with offline-first synchronization and native tactile responsiveness.",
-    fullDesc: "Our mobile engineering team creates intuitive, gesture-driven applications. Every transition, touch feedback, and background synchronization workflow is tuned for maximum retention and seamless usability across all device form factors.",
-    icon: "Smartphone",
-    accent: "mint",
-    deliverables: [
-      "Cross-Platform iOS & Android Apps",
-      "Native Performance Optimization",
-      "Real-Time Push & Device Sync",
-      "Biometric Security Integration",
-      "Mobile-First AI Assistants"
-    ],
-    technologies: ["React Native", "Swift", "Kotlin", "GraphQL", "Capacitor"]
   },
   {
     id: "ui-ux-design",
@@ -302,104 +302,105 @@ export const companyValues = [
 export const teamMembers = [
   {
     id: "waqas-ahmad",
-    name: "Waqas Ahmad",
-    role: "Chief Executive Officer (CEO) & Founder",
+    name: "Waqas Ahmad", // Name updated
+    role: "Flutter App Developer & Founder", // Role updated
     department: "Executive Leadership",
     isLeader: true,
-    bio: "Visionary leader guiding TRICODE's overarching strategy, enterprise AI initiatives, and engineering standards. Passionate about empowering visionary businesses through cutting-edge intelligent automation and software craft.",
-    skills: ["AI Strategy", "Executive Leadership", "Enterprise Architecture", "Product Vision"],
-    image: null, // Ready for photo drop
-    initials: "WA",
+    bio: "Visionary leader guiding TRICODE's mobile engineering initiatives. 10+ years of experience delivering 100+ successful Flutter apps and digital products for enterprise clients.",
+    skills: ["Flutter", "Dart", "App Architecture", "Product Vision", "Enterprise Scaling"],
+    image: "/images/team/waqas-ahmad.jpeg", // Apni image ka path dein
+    objectPosition: "center 20%",
+    initials: "SF",
     gradient: "from-[#2563EB] to-[#7C3AED]",
     social: {
       linkedin: "#",
       github: "#",
-      email: "waqas@tricode.ai"
+      email: "sufyan@tricode.ai"
     }
   },
   {
     id: "adeeba",
-    name: "Adeeba",
-    role: "Senior Backend Developer",
+    name: "Adeeba Imran",
+    role: "Backend Developer",
     department: "Core Backend Engineering",
     isLeader: false,
-    bio: "Core backend architect specializing in scalable microservices, secure REST/GraphQL APIs, database modeling, and high-concurrency server pipelines.",
+    bio: "Core backend engineer specializing in scalable microservices, secure REST/GraphQL APIs, database modeling, and high-concurrency server pipelines.",
     skills: ["Python", "FastAPI", "Node.js", "PostgreSQL", "System Architecture"],
-    image: null,
-    initials: "AD",
+    image: "/images/team/adeeba.png",
+    objectPosition: "center 20%",
+    initials: "AI",
     gradient: "from-[#0284C7] to-[#2563EB]",
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "adeeba@tricode.ai"
-    }
+    social: { linkedin: "#", github: "#", email: "adeeba@tricode.ai" }
   },
   {
     id: "sajid",
-    name: "Sajid",
+    name: "Muhammad Sajid",
     role: "Backend Developer",
     department: "Backend & Cloud Systems",
     isLeader: false,
     bio: "Dedicated backend engineer focused on resilient API integration, cloud-native deployments, distributed caching, and backend performance tuning.",
     skills: ["Django", "Python", "RESTful APIs", "Redis", "Docker"],
-    image: null,
-    initials: "SA",
+    image: "/images/team/sajid.jpeg",
+    objectPosition: "center top",
+    initials: "MS",
     gradient: "from-[#2563EB] to-[#00D2FF]",
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "sajid@tricode.ai"
-    }
+    social: { linkedin: "#", github: "#", email: "sajid@tricode.ai" }
   },
   {
     id: "sehar",
-    name: "Sehar",
-    role: "Flutter & Mobile Developer",
+    name: "Sehar Qadeer",
+    role: "Flutter Developer",
     department: "Mobile Engineering",
     isLeader: false,
     bio: "Expert Flutter engineer crafting visually stunning, responsive Android and iOS apps with 60FPS fluid motion, reactive state management, and native device integrations.",
     skills: ["Flutter", "Dart", "BLoC / Provider", "iOS & Android", "UI/UX Motion"],
-    image: null,
-    initials: "SH",
+    image: "/images/team/sehar.jpeg",
+    objectPosition: "center 15%",
+    initials: "SQ",
     gradient: "from-[#00D2FF] to-[#2563EB]",
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "sehar@tricode.ai"
-    }
+    social: { linkedin: "#", github: "#", email: "sehar@tricode.ai" }
   },
   {
     id: "salman",
-    name: "Salman",
-    role: "Shopify & E-Commerce Developer",
+    name: "Muhammad Salman",
+    role: "Shopify Developer",
     department: "E-Commerce Solutions",
     isLeader: false,
     bio: "Specialist in bespoke Shopify storefronts, custom Liquid templating, headless commerce architectures, and conversion-optimized retail experiences.",
     skills: ["Shopify Plus", "Liquid", "Headless Hydrogen", "Theme Customization", "E-Commerce APIs"],
-    image: null,
-    initials: "SL",
+    image: "/images/team/salman.jpeg",
+    objectPosition: "center 15%",
+    initials: "MS",
     gradient: "from-[#10B981] to-[#2563EB]",
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "salman@tricode.ai"
-    }
+    social: { linkedin: "#", github: "#", email: "salman@tricode.ai" }
   },
   {
     id: "bisma",
-    name: "Bisma",
+    name: "Bisma Jamil",
     role: "Marketing Manager",
     department: "Growth & Brand Strategy",
     isLeader: false,
     bio: "Strategic growth marketer leading TRICODE's digital presence, multi-channel outreach campaigns, brand positioning, and enterprise client acquisition funnels.",
     skills: ["Brand Strategy", "Digital Marketing", "SEO & Content", "Performance Analytics", "Client Growth"],
-    image: null,
-    initials: "BM",
+    image: "/images/team/bisma.jpeg",
+    objectPosition: "center 15%",
+    initials: "BJ",
     gradient: "from-[#EC4899] to-[#7C3AED]",
-    social: {
-      linkedin: "#",
-      github: "#",
-      email: "bisma@tricode.ai"
-    }
+    social: { linkedin: "#", github: "#", email: "bisma@tricode.ai" }
+  },
+  // NAYA MEMBER SUFYAN ADD KIYA HAI
+  {
+    id: "sufyan",
+    name: "Sufyan Rafeeq",
+    role: "Marketing Manager",
+    department: "Growth & Strategy",
+    isLeader: false,
+    bio: "Result-driven Marketing Manager specializing in digital growth, brand positioning, and client acquisition. Focused on scaling TRICODE's reach and building long-term enterprise relationships.",
+    skills: ["Digital Marketing", "Lead Generation", "Brand Strategy", "SEO & Analytics"],
+    image: "/images/team/sufyan.jpg", // Yahan Sufyan ki image path dein
+    objectPosition: "center 15%",
+    initials: "SF",
+    gradient: "from-[#F59E0B] to-[#EF4444]",
+    social: { linkedin: "#", github: "#", email: "sufyan@tricode.ai" }
   }
 ];
