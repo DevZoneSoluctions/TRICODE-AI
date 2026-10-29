@@ -11,9 +11,7 @@
     "preview": "vite preview",
     "build:gh": "vite build --base=/TRICODE-AI/",
     "predeploy": "npm run build:gh",
-    "deploy": "gh-pages -d dist",
-    "server": "node server/index.js",
-    "server:dev": "node --watch server/index.js"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
