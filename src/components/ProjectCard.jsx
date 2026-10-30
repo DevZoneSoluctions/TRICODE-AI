@@ -169,7 +169,7 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
       } hover:border-[#93C5FD] hover:shadow-xl hover:shadow-blue-500/10`}
     >
       {/* Visual Canvas Thumbnail */}
-      <div className={`relative w-full overflow-hidden ${project.visualType === "image" ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
+      <div className={`relative w-full overflow-hidden ${project.visualType === "image" ? "aspect-[21/8]" : "aspect-[16/10]"}`}>
         {renderVisual()}
 
         {/* Project Tag / Badge */}
