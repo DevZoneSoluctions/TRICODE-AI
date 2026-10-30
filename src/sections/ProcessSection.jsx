@@ -4,7 +4,7 @@ import { processSteps } from "../data/siteData";
 
 export default function ProcessSection() {
   return (
-    <section className="relative py-24 sm:py-32 bg-[#F8FAFC] overflow-hidden">
+    <section className="relative py-14 sm:py-24 lg:py-32 bg-[#F8FAFC] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow="ENGINEERING DISCIPLINE"
@@ -16,7 +16,7 @@ export default function ProcessSection() {
         />
 
         {/* Process Steps Timeline Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 lg:gap-8">
           {processSteps.map((step, idx) => (
             <motion.div
               key={step.step}
@@ -24,7 +24,7 @@ export default function ProcessSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="relative rounded-2xl bg-white border border-[#E2E8F0] p-7 flex flex-col justify-between hover:border-[#2563EB] hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300 group"
+              className="relative rounded-2xl bg-white border border-[#E2E8F0] p-5 sm:p-7 flex flex-col justify-between hover:border-[#2563EB] hover:shadow-xl hover:shadow-blue-600/10 transition-all duration-300 group"
             >
               <div>
                 {/* Step number badge */}

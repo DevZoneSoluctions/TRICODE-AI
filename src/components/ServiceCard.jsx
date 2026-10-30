@@ -15,7 +15,7 @@ export default function ServiceCard({ service }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl p-8 border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col h-full">
+    <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col h-full">
       
       {/* Top Section: Icon and Number */}
       <div className="flex justify-between items-start mb-6">

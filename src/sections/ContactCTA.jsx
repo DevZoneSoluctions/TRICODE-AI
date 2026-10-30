@@ -12,7 +12,7 @@ export default function ContactCTA() {
       <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] rounded-full glow-ambient-violet blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] border border-[#CBD5E1] p-8 sm:p-14 lg:p-20 text-center shadow-xl shadow-blue-500/5 overflow-hidden">
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] border border-[#CBD5E1] p-6 sm:p-12 lg:p-20 text-center shadow-xl shadow-blue-500/5 overflow-hidden">
           {/* Subtle grid pattern inside card */}
           <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
@@ -34,7 +34,7 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-6 max-w-3xl mx-auto"
+            className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.12] mb-5 sm:mb-6 max-w-3xl mx-auto"
           >
             Have an Idea?{" "}
             <span className="gradient-text">Let's Make It Real.</span>
@@ -57,7 +57,7 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
           >
             <Button
               to="/contact"

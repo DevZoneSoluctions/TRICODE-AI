@@ -219,7 +219,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.08] mb-5"
+              className="text-3xl xs:text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-4 sm:mb-5"
             >
               Let's Engineer{" "}
               <span className="gradient-text">What's Next.</span>
@@ -250,7 +250,7 @@ export default function Contact() {
             className="lg:col-span-5 flex flex-col gap-6"
           >
             {/* Studio Communications Card */}
-            <div className="rounded-2xl bg-white border border-[#E2E8F0] p-7 sm:p-8 shadow-sm">
+            <div className="rounded-2xl bg-white border border-[#E2E8F0] p-5 sm:p-8 shadow-sm">
               <h3 className="font-heading font-extrabold text-xl text-[#0F172A] mb-7">
                 Studio Communications
               </h3>
@@ -300,7 +300,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.4 }}
-              className="relative rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white p-7 sm:p-8 border border-[#334155] shadow-xl overflow-hidden"
+              className="relative rounded-2xl bg-gradient-to-br from-[#0F172A] to-[#1E293B] text-white p-5 sm:p-8 border border-[#334155] shadow-xl overflow-hidden"
             >
               {/* Glow blobs */}
               <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-[#00D2FF]/12 blur-2xl pointer-events-none" />
@@ -353,7 +353,7 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="lg:col-span-7"
           >
-            <div className="rounded-3xl bg-white border border-[#E2E8F0] p-8 sm:p-10 shadow-sm relative overflow-hidden">
+            <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#E2E8F0] p-5 sm:p-8 lg:p-10 shadow-sm relative overflow-hidden">
               {/* Subtle gradient top accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00D2FF] via-[#2563EB] to-[#7C3AED]" />
 

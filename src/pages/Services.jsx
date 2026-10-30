@@ -55,10 +55,10 @@ function ServiceCard({ service, index }) {
       initial={{ opacity: 0, y: 28 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className={`group relative rounded-2xl bg-white border border-[#E2E8F0] p-7 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-sm ${theme.hoverBorder} hover:shadow-xl ${theme.hoverGlow} overflow-hidden`}
+      className={`group relative rounded-2xl bg-white border border-[#E2E8F0] p-5 sm:p-8 flex flex-col justify-between transition-all duration-300 shadow-sm ${theme.hoverBorder} hover:shadow-xl ${theme.hoverGlow} overflow-hidden`}
     >
       {/* Background Number Watermark */}
-      <span className={`absolute top-5 right-6 font-heading font-extrabold text-7xl sm:text-8xl select-none pointer-events-none transition-colors duration-300 ${theme.numberColor}`}>
+      <span className={`absolute top-4 right-4 sm:top-5 sm:right-6 font-heading font-extrabold text-6xl sm:text-8xl select-none pointer-events-none transition-colors duration-300 ${theme.numberColor}`}>
         {service.number}
       </span>
 
@@ -316,7 +316,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.08] mb-6"
+              className="text-3xl xs:text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.08] mb-6"
             >
               Architectural Precision.{" "}
               <span className="gradient-text">Futuristic Execution.</span>

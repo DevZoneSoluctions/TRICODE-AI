@@ -56,12 +56,12 @@ export default function Navbar() {
               <img
                 src={logoImg}
                 alt="TRICODE AI Logo"
-                className="h-14 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                className="h-11 sm:h-16 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
                 style={{ mixBlendMode: "multiply" }}
               />
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-heading font-extrabold text-xl sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
+                  <span className="font-heading font-extrabold text-lg sm:text-2xl text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
                     TRICODE
                   </span>
                   <span className="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded-sm bg-gradient-to-r from-[#00D2FF]/15 to-[#D946EF]/15 text-[#2563EB] border border-[#00D2FF]/30">
@@ -137,7 +137,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed inset-x-0 top-[65px] z-40 bg-white/95 backdrop-blur-xl border-b border-[#E2E8F0] shadow-2xl px-6 py-6 md:hidden"
+            className="fixed inset-x-0 top-[60px] sm:top-[68px] max-h-[calc(100vh-70px)] overflow-y-auto z-40 bg-white/95 backdrop-blur-xl border-b border-[#E2E8F0] shadow-2xl px-5 sm:px-6 py-6 md:hidden"
           >
             <div className="flex flex-col gap-2">
               {navLinks.map((link) => {

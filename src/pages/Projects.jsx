@@ -201,7 +201,7 @@ function CaseStudyModal({ project, onClose }) {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 10 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="relative w-full max-w-2xl bg-white rounded-3xl border border-[#E2E8F0] shadow-2xl p-7 sm:p-9 max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl border border-[#E2E8F0] shadow-2xl p-5 sm:p-8 max-h-[88vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <button
@@ -224,7 +224,7 @@ function CaseStudyModal({ project, onClose }) {
 
         <p className="text-sm sm:text-base text-[#64748B] leading-relaxed mb-6 font-normal">{project.fullDesc}</p>
 
-        <div className="grid grid-cols-3 gap-3 p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 sm:p-5 rounded-2xl bg-[#F8FAFC] border border-[#E2E8F0] mb-6">
           {project.metrics.map((m, i) => (
             <div key={i} className="text-center">
               <div className="font-heading font-extrabold text-lg sm:text-xl text-[#2563EB] mb-0.5">{m.value}</div>
@@ -297,7 +297,7 @@ export default function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.08] mb-6"
+              className="text-3xl xs:text-4xl sm:text-5xl lg:text-[64px] font-heading font-extrabold text-[#0F172A] tracking-tight leading-[1.1] mb-5 sm:mb-6"
             >
               Engineered Systems.{" "}
               <span className="gradient-text">Realized At Scale.</span>
@@ -322,7 +322,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5"
+          className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5"
         >
           {categories.map((cat) => {
             const isActive = activeCategory === cat;

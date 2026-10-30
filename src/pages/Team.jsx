@@ -233,7 +233,7 @@ export default function Team() {
                 <span className="tracking-widest">LEADERSHIP &amp; ENGINEERING CULTURE</span>
               </motion.div>
 
-              <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.08 }} className="text-4xl sm:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-[#0F172A] mb-6 leading-[1.05]">
+              <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.08 }} className="text-3xl xs:text-4xl sm:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight text-[#0F172A] mb-4 sm:mb-6 leading-[1.1] sm:leading-[1.05]">
                 Executive <br />
                 <span className="bg-gradient-to-r from-[#2563EB] via-[#3B82F6] to-[#7C3AED] bg-clip-text text-transparent">Leadership.</span>
               </motion.h1>
@@ -323,8 +323,8 @@ export default function Team() {
               </h2>
             </div>
 
-            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative bg-white rounded-[2.5rem] border border-[#E2E8F0] shadow-2xl shadow-blue-900/5 p-6 sm:p-10 lg:p-14 max-w-6xl mx-auto overflow-visible">
-              <Quote className="absolute -top-6 left-8 w-16 h-16 text-[#2563EB]/10 rotate-180" />
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative bg-white rounded-2xl sm:rounded-[2.5rem] border border-[#E2E8F0] shadow-2xl shadow-blue-900/5 p-5 sm:p-10 lg:p-14 max-w-6xl mx-auto overflow-hidden sm:overflow-visible">
+              <Quote className="absolute -top-4 left-4 sm:-top-6 sm:left-8 w-10 h-10 sm:w-16 sm:h-16 text-[#2563EB]/10 rotate-180" />
               
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                 
@@ -368,10 +368,10 @@ export default function Team() {
 
                   <div className="w-full h-px bg-[#E2E8F0] mb-6" />
 
-                  <div className="grid grid-cols-3 gap-6 w-full">
+                  <div className="grid grid-cols-3 gap-2 sm:gap-6 w-full text-center sm:text-left">
                     {[{ value: "10+", label: "Years Exp.", color: "#0F172A" }, { value: "100+", label: "Clients Served", color: "#0F172A" }, { value: "99.8%", label: "Success Rate", color: "#2563EB" }].map((s) => (
                       <div key={s.label}>
-                        <div className="text-2xl sm:text-3xl font-heading font-extrabold" style={{ color: s.color }}>{s.value}</div>
+                        <div className="text-lg xs:text-2xl sm:text-3xl font-heading font-extrabold" style={{ color: s.color }}>{s.value}</div>
                         <div className="text-[11px] font-semibold text-[#64748B] uppercase tracking-wider">{s.label}</div>
                       </div>
                     ))}

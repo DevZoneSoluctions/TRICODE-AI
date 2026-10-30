@@ -46,17 +46,17 @@ export default function ServicesPreview() {
   ];
 
   return (
-    <section className="py-24 bg-[#F8FAFC]">
+    <section className="py-14 sm:py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 mb-4">
               <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
               <span className="text-xs font-bold text-[#2563EB] uppercase tracking-wider">Our Capabilities</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0F172A] leading-tight mb-4">
               Engineering High-Impact <br className="hidden sm:block" />
               Systems Across <span className="text-[#2563EB]">The Modern AI Stack.</span>
             </h2>

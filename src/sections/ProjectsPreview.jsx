@@ -10,7 +10,7 @@ export default function ProjectsPreview() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section className="relative py-24 sm:py-32 bg-white border-y border-[#E2E8F0] overflow-hidden">
+    <section className="relative py-14 sm:py-24 lg:py-32 bg-white border-y border-[#E2E8F0] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -65,7 +65,7 @@ export default function ProjectsPreview() {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="relative w-full max-w-2xl bg-white rounded-2xl border border-[#E2E8F0] shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto"
+            className="relative w-full max-w-2xl bg-white rounded-2xl border border-[#E2E8F0] shadow-2xl p-5 sm:p-8 max-h-[88vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button

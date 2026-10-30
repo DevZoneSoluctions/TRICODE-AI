@@ -137,7 +137,7 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
       </div>
 
       {/* Content Container */}
-      <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
+      <div className="p-5 sm:p-7 flex flex-col flex-1 justify-between">
         <div>
           <div className="text-xs font-bold uppercase tracking-wider text-[#2563EB] mb-2">
             {project.category}
@@ -153,7 +153,7 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
 
           {/* Key Metrics / Highlights */}
           {project.metrics && (
-            <div className="grid grid-cols-3 gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] mb-5">
+            <div className="grid grid-cols-3 gap-1.5 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] mb-5">
               {project.metrics.map((m, idx) => (
                 <div key={idx} className="text-center">
                   <div className="text-sm sm:text-base font-heading font-extrabold text-[#2563EB]">
