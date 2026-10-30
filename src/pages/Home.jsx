@@ -3,7 +3,6 @@ import Hero from "../sections/Hero";
 import TechStrip from "../sections/TechStrip";
 import ServicesPreview from "../sections/ServicesPreview";
 import ProjectsPreview from "../sections/ProjectsPreview";
-import ClientsSection from "../sections/ClientsSection";
 import ProcessSection from "../sections/ProcessSection";
 import ContactCTA from "../sections/ContactCTA";
 
@@ -18,7 +17,6 @@ export default function Home() {
       <TechStrip />
       <ServicesPreview />
       <ProjectsPreview />
-      <ClientsSection />
       <ProcessSection />
       <ContactCTA />
     </div>

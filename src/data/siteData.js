@@ -149,7 +149,8 @@ export const projectsData = [
     ],
     technologies: ["Flutter", "Dart", "WebRTC", "Firebase", "Node.js", "Google Play"],
     accent: "from-[#FF4E88] to-[#FF8E53]",
-    visualType: "video-dating"
+    visualType: "image",
+    thumbnail: "/images/projects/candid-app.jpg"
   },
   {
     id: "omninexus",

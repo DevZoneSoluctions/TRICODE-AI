@@ -6,6 +6,18 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
   // Visual artwork representation according to project type
   const renderVisual = () => {
     switch (project.visualType) {
+      case "image":
+        return (
+          <div className="relative w-full h-full overflow-hidden bg-[#0F172A]">
+            <img
+              src={project.thumbnail}
+              alt={project.title}
+              className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A]/60 via-transparent to-transparent" />
+          </div>
+        );
+
       case "video-dating":
         return (
           <div className="relative w-full h-full flex items-center justify-center p-6 bg-gradient-to-br from-[#0F172A] via-[#1A0B2E] to-[#2D0B2E] overflow-hidden">
