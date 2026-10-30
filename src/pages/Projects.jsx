@@ -20,6 +20,19 @@ function GithubIcon(props) {
 
 /* ─── Visual Abstract Graphics per project type ──────────────────────────── */
 function ProjectVisual({ project }) {
+  // If project has a real image thumbnail, show it directly
+  if (project.visualType === "image" && project.thumbnail) {
+    return (
+      <div className="relative w-full h-full bg-[#1A0B2E] flex items-center justify-center px-3 pt-2 pb-0">
+        <img
+          src={project.thumbnail}
+          alt={project.title}
+          className="w-full h-full object-cover object-top rounded-t-lg transition-transform duration-700 group-hover:scale-[1.02]"
+        />
+      </div>
+    );
+  }
+
   const icons = { "AI & Autonomous Systems": Brain, "Web Applications": Globe, "Mobile & Health Tech": Activity, "Custom Software": BarChart3, "Cloud & DevOps": Cpu, "UI/UX & Web Apps": Layers, "Mobile Applications": Smartphone };
   const IconComponent = icons[project.category] || TrendingUp;
 
@@ -122,7 +135,7 @@ function ProjectCard({ project, index, onSelect }) {
       className="group rounded-2xl overflow-hidden border border-[#E2E8F0] bg-white hover:border-[#93C5FD] hover:shadow-2xl hover:shadow-blue-500/12 transition-all duration-300 flex flex-col cursor-default"
     >
       {/* Dark Top Visual Area */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden">
+      <div className={`relative w-full overflow-hidden ${project.visualType === "image" ? "aspect-[21/10]" : "aspect-[16/10]"}`}>
         <ProjectVisual project={project} />
         <div className="absolute top-4 right-4 z-10">
           <span className="text-[10px] font-mono font-medium text-white/80 bg-[#0F172A]/70 px-2.5 py-1 rounded-lg backdrop-blur-sm">
