@@ -133,6 +133,25 @@ export const servicesData = [
 
 export const projectsData = [
   {
+    id: "candid-dating",
+    title: "Candid — Video Dating App",
+    category: "Mobile Applications",
+    client: "Candid Technologies Inc.",
+    year: "2025 - 2026",
+    badge: "Google Play Store Live",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.candiddatingapp.candid",
+    shortDesc: "Video-first dating mobile application featuring unscripted video prompts, scheduled virtual speed dating, and real-time WebRTC matchmaking.",
+    fullDesc: "Candid revolutionizes digital matchmaking by replacing static photo swiping with authentic, unscripted video prompt profiles and scheduled virtual speed dating sessions. Engineered with Flutter and WebRTC for fluid 60 FPS mobile performance, sub-50ms message delivery, and low-latency interactive streaming directly on Android and iOS.",
+    metrics: [
+      { label: "Active Format", value: "100% Video" },
+      { label: "Stream Latency", value: "<60ms" },
+      { label: "Store Rating", value: "4.8 ★" }
+    ],
+    technologies: ["Flutter", "Dart", "WebRTC", "Firebase", "Node.js", "Google Play"],
+    accent: "from-[#FF4E88] to-[#FF8E53]",
+    visualType: "video-dating"
+  },
+  {
     id: "omninexus",
     title: "OmniNexus AI",
     category: "AI & Autonomous Systems",
@@ -402,5 +421,98 @@ export const teamMembers = [
     initials: "SF",
     gradient: "from-[#F59E0B] to-[#EF4444]",
     social: { linkedin: "#", github: "#", email: "sufyan@tricode.ai" }
+  }
+];
+
+
+export const clientsData = [
+  {
+    id: "candid",
+    name: "Candid Dating",
+    category: "Mobile Consumer App",
+    location: "United States",
+    badge: "Play Store Verified",
+    url: "https://play.google.com/store/apps/details?id=com.candiddatingapp.candid",
+    description: "Full-cycle Flutter mobile engineering, real-time WebRTC video speed dating, and high-concurrency push architecture.",
+    logoText: "CANDID",
+    logoColor: "from-[#FF4E88] to-[#FF8E53]",
+    isLiveApp: true
+  },
+  {
+    id: "biosync",
+    name: "BioSync Health Networks",
+    category: "Digital Healthcare",
+    location: "United Kingdom",
+    badge: "HIPAA Compliant",
+    description: "Cross-platform clinical companion and real-time medical sensor telemetry dashboard for critical care.",
+    logoText: "BIOSYNC",
+    logoColor: "from-[#00BCA6] to-[#00D2FF]"
+  },
+  {
+    id: "apex",
+    name: "Apex Capital Strategies",
+    category: "Fintech & Quantitative",
+    location: "Singapore",
+    badge: "Enterprise",
+    description: "High-frequency algorithmic trading visualizer and ultra-low-latency market data analytics.",
+    logoText: "APEX CAP",
+    logoColor: "from-[#2563EB] to-[#7C3AED]"
+  },
+  {
+    id: "sovereign",
+    name: "Sovereign Retail Group",
+    category: "E-Commerce Flagship",
+    location: "UAE",
+    badge: "Omnichannel",
+    description: "Vector-driven generative product search and dynamic headless Shopify storefront architecture.",
+    logoText: "SOVEREIGN",
+    logoColor: "from-[#D946EF] to-[#2563EB]"
+  },
+  {
+    id: "nextgen",
+    name: "Next-Gen Media Labs",
+    category: "Interactive Canvas & SaaS",
+    location: "Germany",
+    badge: "SaaS Platform",
+    description: "WebGL interactive collaborative canvas and multi-user delta WebSocket synchronization.",
+    logoText: "NEXT-GEN",
+    logoColor: "from-[#00D2FF] to-[#2563EB]"
+  },
+  {
+    id: "voxel",
+    name: "Voxel Global Systems",
+    category: "Cloud Native & DevOps",
+    location: "Canada",
+    badge: "Enterprise Cloud",
+    description: "Automated Kubernetes GPU cluster allocation and dynamic workload autoscaling.",
+    logoText: "VOXEL",
+    logoColor: "from-[#7C3AED] to-[#9333EA]"
+  }
+];
+
+export const clientTestimonials = [
+  {
+    quote: "TRICODE brought Candid from concept to a production-grade video app on Google Play with stellar execution. Their Flutter architecture and video streaming pipelines are unmatched.",
+    author: "Product Leadership",
+    role: "Candid Dating App",
+    highlight: "Google Play Store Live",
+    stars: 5,
+    verified: true
+  },
+  {
+    quote: "Working with TRICODE felt like having a dedicated tier-1 Silicon Valley engineering team. Transparent sprints, rock-solid code, and zero downtime across our entire infrastructure.",
+    author: "VP of Engineering",
+    role: "BioSync Health Networks",
+    highlight: "Enterprise Scale",
+    stars: 5,
+    verified: true
+  },
+  {
+    quote: "Their full-stack speed and attention to responsive detail exceeded all expectations. Our active user engagement grew by 320% within the first two months post-launch.",
+    author: "Founder & CTO",
+    role: "Apex Capital Strategies",
+    highlight: "+320% Engagement",
+    stars: 5,
+    verified: true
   }
 ];

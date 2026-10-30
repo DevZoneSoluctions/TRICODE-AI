@@ -1,4 +1,4 @@
-import { ArrowUpRight, Cpu, Activity, BarChart3 } from "lucide-react";
+import { ArrowUpRight, Cpu, Activity, BarChart3, Video, Heart, Smartphone } from "lucide-react";
 import { motion } from "motion/react";
 import Button from "./Button";
 
@@ -6,6 +6,44 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
   // Visual artwork representation according to project type
   const renderVisual = () => {
     switch (project.visualType) {
+      case "video-dating":
+        return (
+          <div className="relative w-full h-full flex items-center justify-center p-6 bg-gradient-to-br from-[#0F172A] via-[#1A0B2E] to-[#2D0B2E] overflow-hidden">
+            <div className="absolute inset-0 bg-grid-pattern opacity-15" />
+            <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#FF4E88]/30 blur-3xl animate-pulse-subtle" />
+            <div className="absolute -bottom-10 -right-10 w-44 h-44 rounded-full bg-[#7C3AED]/35 blur-3xl" />
+
+            <div className="relative z-10 w-full max-w-[250px] aspect-[16/10] rounded-2xl bg-black/60 border border-white/20 backdrop-blur-md p-3.5 flex flex-col justify-between shadow-2xl">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-red-500/20 border border-red-500/40 text-[10px] text-red-400 font-bold">
+                  <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
+                  <span>LIVE VIDEO</span>
+                </div>
+                <span className="text-[10px] text-white/70 font-mono">Flutter Engine</span>
+              </div>
+
+              <div className="flex items-center justify-center gap-3 my-2">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#FF4E88] to-[#FF8E53] flex items-center justify-center text-white shadow-lg shadow-pink-500/30">
+                  <Video className="w-5 h-5" />
+                </div>
+                <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#7C3AED] to-[#00D2FF] flex items-center justify-center text-white shadow-lg shadow-purple-500/30">
+                  <Heart className="w-5 h-5 fill-white" />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between text-[10px] text-white/70 pt-1 border-t border-white/10">
+                <span>WebRTC 60fps</span>
+                <span className="text-[#FF8E53] font-bold">Google Play Store</span>
+              </div>
+            </div>
+
+            <div className="absolute bottom-3 left-4 flex items-center gap-2 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[11px] text-white">
+              <Smartphone className="w-3.5 h-3.5 text-[#FF4E88]" />
+              <span>Candid Dating App</span>
+            </div>
+          </div>
+        );
+
       case "network-graph":
         return (
           <div className="relative w-full h-full flex items-center justify-center p-6 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0B1120] overflow-hidden">
@@ -187,17 +225,31 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
           </div>
 
           {/* Action Link / Details Trigger */}
-          <div className="pt-4 border-t border-[#E2E8F0] flex items-center justify-between">
+          <div className="pt-4 border-t border-[#E2E8F0] flex items-center justify-between gap-2 flex-wrap">
             <span className="text-xs text-[#94A3B8]">Client: {project.client}</span>
-            <Button
-              variant="secondary"
-              size="sm"
-              icon={ArrowUpRight}
-              onClick={() => onSelect && onSelect(project)}
-              className="text-xs py-1.5 px-3.5"
-            >
-              Case Study
-            </Button>
+            <div className="flex items-center gap-2">
+              {project.playStoreUrl && (
+                <a
+                  href={project.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-[#00D2FF]/15 to-[#2563EB]/15 border border-[#00D2FF]/40 text-[11px] font-bold text-[#0284C7] hover:bg-[#2563EB] hover:text-white transition-all"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <span>Google Play</span>
+                  <ArrowUpRight className="w-3 h-3" />
+                </a>
+              )}
+              <Button
+                variant="secondary"
+                size="sm"
+                icon={ArrowUpRight}
+                onClick={() => onSelect && onSelect(project)}
+                className="text-xs py-1.5 px-3.5"
+              >
+                Case Study
+              </Button>
+            </div>
           </div>
         </div>
       </div>

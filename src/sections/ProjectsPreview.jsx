@@ -123,22 +123,35 @@ export default function ProjectsPreview() {
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#E2E8F0]">
-              <Button
-                variant="secondary"
-                size="sm"
-                onClick={() => setSelectedProject(null)}
-              >
-                Close
-              </Button>
-              <Button
-                to="/contact"
-                variant="primary"
-                size="sm"
-                icon={ArrowRight}
-              >
-                Request Similar Architecture
-              </Button>
+            <div className="flex items-center justify-between gap-3 pt-4 border-t border-[#E2E8F0] flex-wrap">
+              {selectedProject.playStoreUrl ? (
+                <a
+                  href={selectedProject.playStoreUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#0F172A] text-white hover:bg-[#1E293B] text-xs font-bold shadow-md transition-all"
+                >
+                  <span>View on Google Play Store</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#00D2FF]" />
+                </a>
+              ) : <div />}
+              <div className="flex items-center gap-2">
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => setSelectedProject(null)}
+                >
+                  Close
+                </Button>
+                <Button
+                  to="/contact"
+                  variant="primary"
+                  size="sm"
+                  icon={ArrowRight}
+                >
+                  Request Similar Architecture
+                </Button>
+              </div>
             </div>
           </div>
         </div>

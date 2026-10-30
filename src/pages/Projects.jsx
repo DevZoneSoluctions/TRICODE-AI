@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from "motion/react";
 import {
   ArrowUpRight, Sparkles, X, ArrowRight, Activity, Cpu,
-  BarChart3, Globe, Brain, Layers, TrendingUp
+  BarChart3, Globe, Brain, Layers, TrendingUp, Smartphone
 } from "lucide-react";
 import Button from "../components/Button";
 import ContactCTA from "../sections/ContactCTA";
@@ -20,7 +20,7 @@ function GithubIcon(props) {
 
 /* ─── Visual Abstract Graphics per project type ──────────────────────────── */
 function ProjectVisual({ project }) {
-  const icons = { "AI & Autonomous Systems": Brain, "Web Applications": Globe, "Mobile & Health Tech": Activity, "Custom Software": BarChart3, "Cloud & DevOps": Cpu, "UI/UX & Web Apps": Layers };
+  const icons = { "AI & Autonomous Systems": Brain, "Web Applications": Globe, "Mobile & Health Tech": Activity, "Custom Software": BarChart3, "Cloud & DevOps": Cpu, "UI/UX & Web Apps": Layers, "Mobile Applications": Smartphone };
   const IconComponent = icons[project.category] || TrendingUp;
 
   const accentColors = {
@@ -30,6 +30,7 @@ function ProjectVisual({ project }) {
     "Custom Software":          { primary: "#7547F5", secondary: "#FF795E", glow: "rgba(117,71,245,0.4)" },
     "Cloud & DevOps":           { primary: "#2563EB", secondary: "#7547F5", glow: "rgba(37,99,235,0.4)" },
     "UI/UX & Web Apps":         { primary: "#FF795E", secondary: "#9BEBD6", glow: "rgba(255,121,94,0.4)" },
+    "Mobile Applications":      { primary: "#FF4E88", secondary: "#2563EB", glow: "rgba(255,78,136,0.4)" },
   };
   const colors = accentColors[project.category] || { primary: "#2563EB", secondary: "#7C3AED", glow: "rgba(37,99,235,0.4)" };
 
@@ -242,13 +243,26 @@ function CaseStudyModal({ project, onClose }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 pt-5 border-t border-[#E2E8F0]">
-          <Button variant="primary" size="sm" onClick={onClose} to="/contact" icon={ArrowRight}>
-            Request Similar Build
-          </Button>
-          <Button variant="secondary" size="sm" onClick={onClose}>
-            Close
-          </Button>
+        <div className="flex items-center justify-between gap-3 pt-5 border-t border-[#E2E8F0] flex-wrap">
+          {project.playStoreUrl ? (
+            <a
+              href={project.playStoreUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#0F172A] text-white hover:bg-[#1E293B] text-xs sm:text-sm font-bold shadow-md transition-all"
+            >
+              <span>Get on Google Play Store</span>
+              <ArrowRight className="w-3.5 h-3.5 text-[#00D2FF]" />
+            </a>
+          ) : <div />}
+          <div className="flex items-center gap-2">
+            <Button variant="secondary" size="sm" onClick={onClose}>
+              Close
+            </Button>
+            <Button variant="primary" size="sm" onClick={onClose} to="/contact" icon={ArrowRight}>
+              Request Similar Build
+            </Button>
+          </div>
         </div>
       </motion.div>
     </motion.div>
