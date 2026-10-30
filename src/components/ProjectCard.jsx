@@ -8,13 +8,13 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
     switch (project.visualType) {
       case "image":
         return (
-          <div className="relative w-full h-full flex items-center justify-center overflow-hidden bg-[#1A0B2E]">
+          <div className="relative w-full h-full overflow-hidden bg-[#1A0B2E]">
             <img
               src={project.thumbnail}
               alt={project.title}
-              className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-102"
+              style={{ objectPosition: "center center" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1A0B2E]/50 via-transparent to-transparent pointer-events-none" />
           </div>
         );
 
@@ -169,7 +169,7 @@ export default function ProjectCard({ project, onSelect, featured = false }) {
       } hover:border-[#93C5FD] hover:shadow-xl hover:shadow-blue-500/10`}
     >
       {/* Visual Canvas Thumbnail */}
-      <div className={`relative w-full overflow-hidden ${project.visualType === "image" ? "aspect-[16/6]" : "aspect-[16/10]"}`}>
+      <div className={`relative w-full overflow-hidden ${project.visualType === "image" ? "aspect-[16/9]" : "aspect-[16/10]"}`}>
         {renderVisual()}
 
         {/* Project Tag / Badge */}
