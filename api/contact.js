@@ -31,6 +31,7 @@ const buildEmailHTML = (data) => `
       <p>A visitor submitted the contact form on your website.</p>
     </div>
     <div class="body">
+    
       <div style="display:flex;gap:20px;flex-wrap:wrap;margin-bottom:24px;">
         <div class="field" style="flex:1;min-width:180px;">
           <div class="label">Full Name</div>

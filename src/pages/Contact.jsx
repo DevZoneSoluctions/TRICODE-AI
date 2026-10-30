@@ -141,9 +141,9 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL
-        ? `${import.meta.env.VITE_API_URL.replace(/\/$/, "")}/api/contact`
-        : "/api/contact";
+      const baseUrl =
+        import.meta.env.VITE_API_URL || "https://tricode-ai-backend.vercel.app";
+      const apiUrl = `${baseUrl.replace(/\/$/, "")}/api/contact`;
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
