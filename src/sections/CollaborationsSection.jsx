@@ -121,15 +121,15 @@ export default function CollaborationsSection() {
                 )}
 
                 {/* Country & Badge Overlay */}
-                <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold tracking-wide bg-white/95 backdrop-blur-md text-[#0F172A] border border-[#CBD5E1] shadow-xs flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 sm:top-4 sm:left-4 z-20 flex items-center gap-2">
+                  <span className="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-semibold tracking-wide bg-white/95 backdrop-blur-md text-[#0F172A] border border-[#CBD5E1] shadow-xs flex items-center gap-1.5">
                     <span>{collab.flag}</span>
                     <span>{collab.country}</span>
                   </span>
                 </div>
 
-                <div className="absolute top-4 right-4 z-20">
-                  <span className="px-2.5 py-1 rounded-md text-[11px] font-bold tracking-wide bg-[#2563EB] text-white shadow-sm flex items-center gap-1">
+                <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20">
+                  <span className="px-2 sm:px-2.5 py-1 rounded-md text-[10px] sm:text-[11px] font-bold tracking-wide bg-[#2563EB] text-white shadow-sm flex items-center gap-1">
                     <CheckCircle2 className="w-3 h-3 text-white" />
                     <span>{collab.status}</span>
                   </span>
@@ -137,19 +137,19 @@ export default function CollaborationsSection() {
               </div>
 
               {/* Content Body */}
-              <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between">
+              <div className="p-5 sm:p-7 flex flex-col flex-1 justify-between">
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wider text-[#2563EB] mb-2 flex items-center gap-1.5">
                     <Building2 className="w-3.5 h-3.5" />
                     <span>{collab.badge}</span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-heading font-extrabold text-[#0F172A] group-hover:text-[#2563EB] transition-colors mb-3">
+                  <h3 className="text-lg sm:text-2xl font-heading font-extrabold text-[#0F172A] group-hover:text-[#2563EB] transition-colors mb-3">
                     {collab.name}
                   </h3>
 
                   {/* Address Box */}
-                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] mb-4 text-xs text-[#334155] leading-relaxed">
+                  <div className="flex items-start gap-2.5 p-3 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] mb-4 text-xs text-[#334155] leading-relaxed break-words">
                     <MapPin className="w-4 h-4 text-[#2563EB] shrink-0 mt-0.5" />
                     <span className="font-medium">{collab.location}</span>
                   </div>
@@ -165,7 +165,7 @@ export default function CollaborationsSection() {
                     {collab.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[11px] font-semibold px-2.5 py-1 rounded-md bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]"
+                        className="text-[10px] sm:text-[11px] font-semibold px-2 sm:px-2.5 py-1 rounded-md bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE]"
                       >
                         {tag}
                       </span>

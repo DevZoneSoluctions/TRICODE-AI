@@ -12,7 +12,7 @@ export default function ContactCTA() {
       <div className="absolute top-1/4 right-1/4 w-[350px] h-[350px] rounded-full glow-ambient-violet blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] border border-[#CBD5E1] p-6 sm:p-12 lg:p-20 text-center shadow-xl shadow-blue-500/5 overflow-hidden">
+        <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#F8FAFC] via-white to-[#EFF6FF] border border-[#CBD5E1] p-5 sm:p-12 lg:p-20 text-center shadow-xl shadow-blue-500/5 overflow-hidden">
           {/* Subtle grid pattern inside card */}
           <div className="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none" />
 
@@ -46,7 +46,7 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-[#64748B] max-w-2xl mx-auto mb-10 leading-relaxed font-normal"
+            className="text-sm sm:text-lg text-[#64748B] max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-normal"
           >
             Whether you need an enterprise AI system, high-performance web platform, or full-stack digital transformation, our senior engineering team is ready to deliver.
           </motion.p>
@@ -57,14 +57,14 @@ export default function ContactCTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto max-w-full mx-auto"
           >
             <Button
               to="/contact"
               variant="primary"
               size="lg"
               icon={ArrowRight}
-              className="shadow-xl shadow-blue-600/25"
+              className="shadow-xl shadow-blue-600/25 justify-center py-3 sm:py-3.5 text-sm sm:text-base"
             >
               Start a Project
             </Button>
@@ -76,8 +76,11 @@ export default function ContactCTA() {
               size="lg"
               icon={Mail}
               iconPosition="left"
+              className="justify-center py-3 sm:py-3.5 px-3 sm:px-6 text-[13px] sm:text-base font-semibold max-w-full"
             >
-              {siteConfig.email}
+              <span className="truncate max-w-[220px] xs:max-w-[270px] sm:max-w-none">
+                {siteConfig.email}
+              </span>
             </Button>
           </motion.div>
         </div>
