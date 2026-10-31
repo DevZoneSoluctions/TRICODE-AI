@@ -76,9 +76,9 @@ export default function ContactCTA() {
               size="lg"
               icon={Mail}
               iconPosition="left"
-              className="justify-center py-3 sm:py-3.5 px-3 sm:px-6 text-[13px] sm:text-base font-semibold max-w-full"
+              className="justify-center py-3 sm:py-3.5 px-3 sm:px-6 font-semibold max-w-full"
             >
-              <span className="truncate max-w-[220px] xs:max-w-[270px] sm:max-w-none">
+              <span className="break-all sm:break-normal text-[11px] xs:text-[12px] sm:text-base">
                 {siteConfig.email}
               </span>
             </Button>

@@ -48,7 +48,7 @@ export default function ServicesPreview() {
   return (
     <section className="py-14 sm:py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-12 gap-6">
           <div className="max-w-2xl">
@@ -64,7 +64,7 @@ export default function ServicesPreview() {
               From proprietary machine learning models to reactive frontend experiences, we deliver full-cycle software engineering that accelerates organizational growth.
             </p>
           </div>
-          
+
           <a href="/services" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#CBD5E1] text-sm font-semibold text-[#0F172A] hover:bg-white transition-colors whitespace-nowrap">
             All Capabilities <ArrowRight className="w-4 h-4" />
           </a>

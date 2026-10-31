@@ -74,13 +74,16 @@ function MemberAvatar({ member, isCeo = false }) {
   const roleIcon = roleIconMap[member.id];
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-[#0B0F19]">
+    <div className="relative w-full h-full overflow-hidden bg-slate-50">
       {!hasError ? (
         <img
           src={photoUrl}
           alt={member.name}
           onError={() => setHasError(true)}
-          style={{ objectPosition: member.objectPosition || "center 20%" }}
+          style={{
+            objectPosition: member.objectPosition || "center 15%",
+            filter: isCeo ? "brightness(1.08) contrast(1.05) saturate(1.02)" : "none"
+          }}
           className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
         />
       ) : (
@@ -329,20 +332,21 @@ export default function Team() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
                 
                 <div className="lg:col-span-5 flex justify-center lg:justify-start relative">
-                  <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-[2rem] overflow-hidden bg-[#0B1120] shadow-2xl shadow-blue-900/20 border-4 border-white group">
+                  <div className="relative w-full max-w-[340px] aspect-[4/5] rounded-[2rem] overflow-hidden bg-white shadow-2xl shadow-blue-500/10 border-4 border-white group">
                     <MemberAvatar member={ceo} isCeo={true} />
-                    <div className="absolute inset-0 border-[3px] border-transparent bg-gradient-to-tr from-[#2563EB]/40 via-transparent to-[#00D2FF]/40 rounded-[1.8rem] pointer-events-none" />
-                    <div className="absolute bottom-4 inset-x-4 p-3 rounded-2xl bg-[#090E17]/90 backdrop-blur-md border border-white/15 flex items-center justify-between">
+                    {/* Clean border ring with NO dark gradient covering face */}
+                    <div className="absolute inset-0 rounded-[1.8rem] ring-1 ring-inset ring-slate-900/10 pointer-events-none" />
+                    <div className="absolute bottom-4 inset-x-4 p-3 rounded-2xl bg-white/95 backdrop-blur-md border border-[#E2E8F0] shadow-xl flex items-center justify-between">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2563EB] to-[#00D2FF] flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2563EB] to-[#00D2FF] flex items-center justify-center flex-shrink-0 shadow-md shadow-blue-500/20">
                           <Crown className="w-5 h-5 text-white" />
                         </div>
                         <div className="text-left truncate">
-                          <p className="text-[10px] font-bold tracking-widest text-[#00D2FF] uppercase">Founder &amp; CEO</p>
-                          <p className="text-sm font-heading font-extrabold text-white truncate">{ceo.name}</p>
+                          <p className="text-[10px] font-bold tracking-widest text-[#2563EB] uppercase">Founder &amp; CEO</p>
+                          <p className="text-sm font-heading font-extrabold text-[#0F172A] truncate">{ceo.name}</p>
                         </div>
                       </div>
-                      <ShieldCheck className="w-6 h-6 text-[#00D2FF]" />
+                      <ShieldCheck className="w-6 h-6 text-[#2563EB]" />
                     </div>
                   </div>
                 </div>

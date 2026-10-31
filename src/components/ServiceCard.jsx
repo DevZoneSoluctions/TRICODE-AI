@@ -15,7 +15,9 @@ export default function ServiceCard({ service }) {
   };
 
   return (
-    <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#E2E8F0] shadow-sm hover:shadow-md transition-shadow relative overflow-hidden flex flex-col h-full">
+    <div className="group bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#E2E8F0] hover:border-[#93C5FD] shadow-xs hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1.5 transition-all duration-300 relative overflow-hidden flex flex-col h-full">
+      {/* Top Accent Gradient Bar animating on hover */}
+      <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#00D2FF] via-[#2563EB] to-[#D946EF] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
       {/* Top Section: Icon and Number */}
       <div className="flex justify-between items-start mb-6">

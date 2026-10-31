@@ -127,15 +127,24 @@ export default function Navbar() {
                 </Button>
               </div>
 
-              {/* Mobile Hamburger Toggle Button */}
+              {/* Designed Ultra-Modern Hamburger Button */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="md:hidden p-2 rounded-xl text-[#0F172A] hover:text-[#2563EB] hover:bg-[#EFF6FF] border border-[#E2E8F0] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] transition-colors cursor-pointer"
-                aria-label="Open menu"
+                className="group md:hidden relative flex items-center gap-2.5 px-3 py-2 rounded-2xl bg-white/90 hover:bg-white border border-[#E2E8F0] hover:border-[#00D2FF]/60 shadow-xs hover:shadow-md hover:shadow-cyan-500/15 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] transition-all duration-300 cursor-pointer"
+                aria-label="Open navigation menu"
                 aria-expanded={mobileMenuOpen}
               >
-                <Menu className="w-6 h-6" />
+                {/* 3 Animated Styled Bars */}
+                <div className="flex flex-col justify-center items-end gap-1.5 w-5 h-4.5">
+                  <span className="w-5 h-[2px] rounded-full bg-gradient-to-r from-[#2563EB] to-[#00D2FF] transition-all duration-300 group-hover:w-5" />
+                  <span className="w-3.5 h-[2px] rounded-full bg-[#0F172A] transition-all duration-300 group-hover:w-5 group-hover:bg-[#2563EB]" />
+                  <span className="w-5 h-[2px] rounded-full bg-gradient-to-r from-[#00D2FF] to-[#D946EF] transition-all duration-300 group-hover:w-5" />
+                </div>
+                <span className="text-[11px] font-heading font-extrabold tracking-wider text-[#0F172A] uppercase">
+                  Menu
+                </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00D2FF] animate-pulse" />
               </button>
             </div>
           </div>

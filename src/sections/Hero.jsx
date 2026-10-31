@@ -14,10 +14,10 @@ export default function Hero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Expressive Typography & CTAs */}
           <div className="lg:col-span-7 flex flex-col items-start z-10">
-            
+
             {/* Eyebrow Badge */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -103,7 +103,7 @@ export default function Hero() {
               <div className="absolute inset-4 sm:inset-6 rounded-full border border-dashed border-[#00D2FF]/40 animate-orbit pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-[#00D2FF] shadow-[0_0_16px_#00D2FF]" />
               </div>
-              
+
               {/* Middle Orbital Ring (Neon Magenta Reverse) */}
               <div className="absolute inset-12 sm:inset-16 rounded-full border border-[#D946EF]/35 animate-orbit-reverse pointer-events-none">
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 rounded-full bg-[#D946EF] shadow-[0_0_16px_#D946EF]" />
