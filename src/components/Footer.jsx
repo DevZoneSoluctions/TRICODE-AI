@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
 import { siteConfig } from "../data/siteData";
-const logoImg = "/favicon.png";
+const logoImg = "/tricode-logo-new.png";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden="true">
@@ -51,15 +51,16 @@ export default function Footer() {
 
           {/* ── Column 1: Brand ─────────────────────────── */}
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col items-center sm:items-start text-center sm:text-left">
-            <Link to="/" className="flex flex-col items-center sm:items-start gap-2 mb-4 group">
+            <Link to="/" className="flex items-center sm:items-start gap-3 mb-4 group">
               <img
                 src={logoImg}
                 alt="TRICODE Logo"
-                className="h-11 sm:h-12 w-auto object-contain filter drop-shadow-[0_2px_10px_rgba(0,210,255,0.25)] group-hover:scale-105 transition-transform duration-300"
+                className="h-11 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+                style={{ mixBlendMode: "multiply" }}
               />
-              <div className="flex flex-col items-center sm:items-start">
+              <div className="flex flex-col items-start">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-heading font-extrabold text-lg text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
+                  <span className="font-heading font-extrabold text-lg sm:text-xl text-[#0F172A] tracking-tight group-hover:text-[#2563EB] transition-colors">
                     TRICODE
                   </span>
                   <span className="text-[9px] uppercase font-bold tracking-widest px-1.5 py-0.5 rounded bg-gradient-to-r from-[#00D2FF]/15 to-[#D946EF]/15 text-[#2563EB] border border-[#00D2FF]/30">
