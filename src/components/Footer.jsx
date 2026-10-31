@@ -42,10 +42,10 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-[#E2E8F0]">
-      
+
       {/* ─── Main Grid ─────────────────────────────────────────── */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8">
-        
+
         {/* Top section: Brand + Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-6 pb-10 border-b border-[#E2E8F0]">
 
@@ -216,10 +216,6 @@ export default function Footer() {
             <Link to="/contact" className="hover:text-[#0F172A] transition-colors">
               Terms of Service
             </Link>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F0FDF4] border border-[#BBF7D0] text-[11px] font-semibold text-[#16A34A]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#16A34A] animate-pulse" />
-              Available for Work
-            </span>
           </div>
         </div>
 
