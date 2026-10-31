@@ -24,7 +24,7 @@ export default function CollaborationsSection() {
       country: "Pakistan",
       flag: "🇵🇰",
       location: "Hasan Chowk, Mureer, Murree Rd, Chamanzar Colony, Rawalpindi, 46000",
-      image: null,
+      image: "/images/collaborations/easezen-solutions.jpeg",
       description:
         "Progressive enterprise technology and digital solutions consultancy. TRICODE AI Technologies collaborates with Easezen Solutions on cross-platform digital architectures, distributed backend pipelines, and high-impact custom software solutions.",
       tags: ["Rawalpindi, Murree Road", "Enterprise Platforms", "Custom Software", "Tech Partnership"],
@@ -39,7 +39,7 @@ export default function CollaborationsSection() {
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <SectionHeading
